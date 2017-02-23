@@ -1,0 +1,92 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Benjamin}{Budet}
+\title{Looking for a 6 months internship in IT}                               % optional, remove / comment the line if not wanted
+\address{21 rue Pasteur - Apt 307}{Le Kremlin-Bicêtre, 94270}{France}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+33~637630768}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{benjamin.budet@epita.fr}                               % optional, remove / comment the line if not wanted
+\homepage{benjamin-budet.fr}                         % optional, remove / comment the line if not wanted
+\social[linkedin]{benjaminbudet}                        % optional, remove / comment the line if not wanted
+%\social[twitter]{purnenduk90}                             % optional, remove / comment the line if not wanted
+\social[github]{budet-b}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+\photo[55pt][0.pt]{budet_b-thumb}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2013--2019}{EPITA}{Ecole Pour l'Informatique et les Techniques Avancées}{Paris}{\textit{France}}{4th year student in informatics engineer school}  % arguments 3 to 6 can be left empty
+\cventry{2010--2013}{Baccalauréat Scientist}{}{Saint-Charles, Saint Brieuc}{\textit{International mention}}{Maths, Physics, Literature, English}
+
+\section{Experience}
+\cventry{2017}{Tiger Compiler}{EPITA}{C++}{}{Compiler for Tiger language.\newline{}%
+Achievements:%
+\begin{itemize}%
+\item Lexer/Parser wrote with Flex and Bison following Andrew Appel book.
+\item Build Abstract Syntax Trees for each grammar node.
+\item Binder section to assign variable to value.
+\item Type-Checking to validate tiger file.
+\item Build test suite in python on about 400 Tiger files to check each part of the project. \newline
+Implemented some bonus like dynamic auto-dispatch test-suite, Valgrind tests, threaded test suite and objects integration in Tiger.
+\end{itemize}}
+\cventry{2016}{42sh}{EPITA}{C}{}{Instrumentation bash shell in C99.\newline{}%
+Achievements:%
+\begin{itemize}%
+\item Lexer entirely wrote from scratch.
+\item Parser exactly following EPITA's grammar.
+\item Build some builtins in the execution part. \newline
+Major objective was to have 0 memory leak during execution with perfect bash grammar.
+\end{itemize}}
+\cventry{2016}{Malloc}{EPITA}{C}{}{Implemented Malloc(3) with MMAP on binary buddies method.}
+\cventry{2016}{Others Projects}{EPITA}{C}{}{myHttpd, Dijkstra algorithm, myReadIso, myFind}
+\section{Languages}
+\cvitemwithcomment{C}{Upper Intermediate}{42sh, Malloc, Dijkstra, MyHttpd, LibStream, FnMatch} 
+\cvitemwithcomment{C++}{Intermediate}{Tiger Compiler, LibBistromatique, Chess IA}
+\cvitemwithcomment{HTML/php/css}{Intermediate}{About 10 business websites.}
+\cvitemwithcomment{Python}{Elementary}{TestSuites, little scripts}
+\end{document}
+
+
+%% end of file `template.tex'.
